@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>托特塔羅占卜</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        #cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #interpretation {
+            margin-top: 2rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>托特塔羅占卜</h1>
+    </header>
+    <main id="app">
+        <div class="form-group">
+            <label for="question">您的問題：</label>
+            <input type="text" id="question" placeholder="請輸入您的問題">
+        </div>
+        <div class="form-group">
+            <label for="spreadType">選擇牌陣：</label>
+            <select id="spreadType">
+                <option value="threeCard">三張牌陣</option>
+                <option value="celticCross">賽爾特十字牌陣</option>
+                <option value="sixPointedStar">六芒星牌陣</option>
+                <option value="horseshoe">馬蹄鐵牌陣</option>
+                <option value="star">星星牌陣</option>
+                <option value="barbaraCross">芭芭拉十字牌陣</option>
+                <option value="fourElements">四元素牌陣</option>
+                <option value="yesNo">布勒杭特的是非題牌陣</option>
+                <option value="changeHeart">回心轉意牌陣</option>
+                <option value="relationship">關係牌陣</option>
+                <option value="trueLove">真愛牌陣</option>
+                <option value="improveLove">改善愛情牌陣</option>
+                <option value="healingHeart">療癒心靈牌陣</option>
+                <option value="bouquet">花束牌陣</option>
+            </select>
+        </div>
+        <button onclick="drawCards()">抽牌</button>
+        <div id="cards"></div>
+        <div id="interpretation"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 托特塔羅占卜. 版權所有.</p>
+    </footer>
+</body>
+</html>
